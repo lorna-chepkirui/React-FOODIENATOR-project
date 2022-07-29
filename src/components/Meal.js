@@ -1,4 +1,6 @@
 import React from "react";
+import MealItem from "./MealItem";
+
 const Meal=() =>{
     return(
     <>
@@ -9,6 +11,13 @@ const Meal=() =>{
             </div>
             <div className="searchBox">
                 <input type="search" className="searchBar"/>
+            </div>
+            <div className="container">
+                <MealItem/>
+                <MealItem/>
+                <MealItem/>
+                <MealItem/>
+                <MealItem/>
             </div>
         </div>
     </>
