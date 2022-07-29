@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useState }  from "react";
 import MealItem from "./MealItem";
+import RecipeIndex from "./RecipeIndex";
 
 const Meal=() =>{
+    const [url, setUrl] = useState("https:/www.themealdb.com/api/json/v1/1/search.php?f=a");
+    
+    useEffect(()=>{
+        fetch(url)
+        .then(res=>res.json())
+        .then(data=> {
+            console.log(data);
+        })
+    },[url])
     return(
     <>
         <div className="main">
@@ -18,6 +28,9 @@ const Meal=() =>{
                 <MealItem/>
                 <MealItem/>
                 <MealItem/>
+            </div>
+            <div className="indexContainer">
+                <RecipeIndex/>
             </div>
         </div>
     </>
