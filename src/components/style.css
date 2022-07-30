@@ -20,13 +20,17 @@ body{
     padding-top: 2rem;
     margin: 1rem;
 }
+.searchBox{
+    text-align: center;
+    margin: 3rem;
+}
 .search-bar{
     margin: 1rem 0;
     width: 400px;
     height: 40px;
     border: none;
     outline: none;
-    border-radius: 1rem;
+    border-radius:  0px;
     padding: 0.3rem 1rem;
 }
 .container{
