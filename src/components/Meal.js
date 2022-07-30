@@ -16,7 +16,7 @@ const Meal=() =>{
             setItem(data.meals);
             setShow(true);
         })
-    },[url])
+    },[url]);
 
     const setIndex=(alpha)=>{
         // eslint-disable-next-line
