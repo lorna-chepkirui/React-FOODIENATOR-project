@@ -3,7 +3,7 @@ import MealItem from "./MealItem";
 import RecipeIndex from "./RecipeIndex";
 
 const Meal=() =>{
-    const [url, setUrl] = useState('https:/www.themealdb.com/api/json/v1/1/search.php?f=a');
+    const [url, setUrl] = useState("https://www.themealdb.com/api/json/v1/1/search.php?f=a");
     const [item, setItem]= useState();
     const [show, setShow]= useState(false);
     const [search, setSearch]= useState("");
@@ -19,15 +19,14 @@ const Meal=() =>{
     },[url]);
 
     const setIndex=(alpha)=>{
-        // eslint-disable-next-line
         setUrl(
-            'https:/www.themealdb.com/api/json/v1/1/search.php?f= ${alpha}'
+            'https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}'
             );
     }
     
     const searchRecipe=(e)=>{
-        if(e.key=="Enter"){
-            setUrl('https:/www.themealdb.com/api/json/v1/1/search.php?s=${search}')
+        if(e.key==="Enter"){
+            setUrl('https://www.themealdb.com/api/json/v1/1/search.php?s=${search}')
         }
     }
 

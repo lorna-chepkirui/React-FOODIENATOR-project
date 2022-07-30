@@ -16,13 +16,10 @@ body{
     color: #030e12;
     font-size: 48px;
     font-weight: 900;
+    margin-top: 30px;
     letter-spacing: 1px;
     padding-top: 2rem;
     margin: 1rem;
-}
-.searchBox{
-    text-align: center;
-    margin: 3rem;
 }
 .search-bar{
     margin: 1rem 0;
@@ -36,7 +33,7 @@ body{
 .container{
     width: 80%;
     margin: 25px auto;
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     grid-template-columns: repeat(auto-fit,minimax(150px,1fr));
     grid-gap: 2rem;
@@ -46,21 +43,29 @@ body{
     width: 180px;
     border-radius: 1rem;
     background-color: #030e12;
-    padding: 5px;
+    padding: 5px;   
 }
 img{
     width: 100%;
     border-radius: 1rem 1rem 0 0;
 }
+.card:hover{
+    cursor: pointer;
+}
 .card h3{
     color: white;
-    font-size: 18px;
+    font-size: 19px;
 
 }
-.indexContainer{
+.numBoxContainer{
     display: flex;
     margin: 2.5rem o;
 }
+
+.numBox:hover {
+    cursor: pointer;
+    background-color: #505050;
+  }  
 .numBox{
     width: 50px;
     height: 40px;
@@ -70,6 +75,11 @@ img{
     align-items: center;
     color: white;
     margin: 0 5px 0 5px;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
 }
 .content img{
     width: 100%;
@@ -85,6 +95,7 @@ img{
     font-size: 1.5rem;
     padding: 2rem;
     text-align: center;
+    height: 200px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 .recipe-details{
@@ -97,8 +108,19 @@ img{
 .ingredients,.instructions{
     flex-basis: 50px;
     text-align: justify;
+    overflow: scroll;
+    height: 400px;
 }
 .ingredients h4{
     margin-top: 1.5rem;
     font-weight: bold;
+}
+iframe{
+    height: 515px;
+    width: 100%;
+}
+.video{
+    width: 80%;
+    margin: 3rem auto;
+    align-self: center;
 }
