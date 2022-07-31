@@ -13,7 +13,7 @@ body{
     text-align: center;
 }
 .heading h1{
-    color: #030e12;
+    color: whitesmoke;
     font-size: 48px;
     font-weight: 900;
     margin-top: 30px;
@@ -21,10 +21,14 @@ body{
     padding-top: 2rem;
     margin: 1rem;
 }
+.heading h2{
+    color: blue;
+    padding-bottom: 2rem;
+}
 .search-bar{
     margin: 1rem 0;
     width: 400px;
-    height: 30px;
+    height: 50px;
     border: none;
     outline: none;
     border-radius:  10px;
