@@ -9,8 +9,8 @@ const Meal=() =>{
     const [search, setSearch]= useState("");
     
     useEffect(()=>{
-        fetch(url)
-        .then(res=>res.json())
+      fetch(url)
+        .then(response=>response.json())
         .then(data=> {
             console.log(data.meals);
             setItem(data.meals);
@@ -20,13 +20,13 @@ const Meal=() =>{
 
     const setIndex=(alpha)=>{
         setUrl(
-            'https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}'
+            `https://www.themealdb.com/api/json/v1/1/search.php?f=${alpha}`
             );
     }
     
     const searchRecipe=(e)=>{
         if(e.key==="Enter"){
-            setUrl('https://www.themealdb.com/api/json/v1/1/search.php?s=${search}')
+            setUrl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
         }
     }
 
@@ -51,7 +51,7 @@ const Meal=() =>{
             </div>
         </div>
     </>
-    )
+    );
 }
 
 export default Meal;

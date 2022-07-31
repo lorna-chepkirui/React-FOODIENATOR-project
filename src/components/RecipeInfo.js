@@ -4,25 +4,25 @@ let vid="";
 const RecipeInfo=()=>{
     const [item, setItem]=useState();
     const {MealId}=useParams();
-    if(MealId!="")
+    if(MealId !=="")
     {
-        fetch('https:/www.themealdb.com/api/json/v1/1/lookup.php?i=${MealId}')
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${MealId}`)
         .then(res=>res.json())
         .then(data=>{
             setItem(data.meals[0])
-        })
+        });
     }
     if(item){
         const url=item.strYoutube;
         const str=url.split("=");
-        vid=str[str.length-1];
+        vid = str[str.length-1];
      }
     return (
         <>
             {
                 (!item)? "" :(<>
                         <div className="content">
-                            <img src={item.strMealThumb} alt=""/>
+                            <img src={item.strMealThumb} alt=""></img>
                             <div className="inner-content">
                                 <h1>{item.strMeal}</h1>
                                 <h2>{item.strArea} Food</h2>
@@ -46,7 +46,7 @@ const RecipeInfo=()=>{
                                 <h4>{item.strInstructions}</h4>
                             </div>
                             <div className="video">
-                                <iframe src={'https://www.youtube.com/embed/${vId}'}>
+                                <iframe title={vid} src={`https://www.youtube.com/embed/${vid}`}>
                                     
                                 </iframe>
                             </div>
