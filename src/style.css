@@ -116,22 +116,31 @@ img{
     justify-content: space-between;
     align-items: center;
 }
-.ingredients,.instructions{
-    flex-basis: 50px;
+.ingredients{
+    flex-basis: 40%;
+}
+.instructions{
+    flex-basis: 1000px;
     text-align: justify;
-    overflow: scroll;
+    overflow: hidden;
     height: 400px;
+    margin-left: 10rem;
 }
 .ingredients h4{
     margin-top: 1.5rem;
     font-weight: bold;
+    margin-right: 5rem;
 }
 iframe{
-    height: 515px;
-    width: 100%;
+    height: 300px;
+    width: 50%;
 }
 .video{
-    width: 80%;
+    width: 200%;
     margin: 3rem auto;
     align-self: center;
+    justify-content: center;
+    display: flex;
+    margin-bottom: 10%;
+    margin-left: 10%;
 }
